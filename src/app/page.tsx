@@ -1,16 +1,17 @@
+import Head from "next/head";
 import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold mb-8">Ayush Pai</h1>
+      <main className="flex min-h-screen flex-col items-center justify-center p-4">
+        <div className="text-center">
+          <h1 className="text-7xl font-bold mb-8">Ayush Pai</h1>
         
-        <div className="text-justify-center mx-auto max-w-3xl mb-10">
-          <p className="text-md">Hi! I am a 2nd-year Computer Science student @ Georgia Tech concentrating in AI and Computer Architecture. My research interest is in exploring the intersection of language and images to build scalable world models.</p>
+        <div className="text-justify-center mx-auto max-w-2xl mb-10">
+          <p className="text-md">Hi! I am a 2nd-year Computer Science student @ Georgia Tech concentrating in AI and Computer Architecture. My research interest is lies in exploring the intersection of language and pixels to build scalable world models.</p>
         </div>
 
-        <div className="flex justify-center gap-4 mb-10">
+        <div className="flex justify-center gap-4 mb-20">
           <a href="mailto:ayushpai@gatech.edu" aria-label="Email" className="text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400">
             <FaEnvelope size={24} />
           </a>
