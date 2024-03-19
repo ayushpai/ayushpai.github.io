@@ -4,7 +4,7 @@ export const metadata = {
   title: "Ayush Pai",
   description: "Ayush Pai's personal website.",
   icons: {
-    icon: '/favicon.png', // /public path
+    icon: '/ayushpai.github.io/favicon.png', // /public path
   },
 };
 
