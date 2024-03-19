@@ -26,36 +26,42 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Work Experience Section */}
+        {/* Work Experience Section with Adjusted Flex */}
         <div className="w-full text-center relative">
+          {/* Vertical Line with Gradient at Bottom */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-gray-300 to-transparent" style={{height: '150%'}}></div>
-          <div className="flex flex-col items-center space-y-4">
-            {/* Experience Entry */}
-            <div className="flex justify-center items-center w-full max-w-md">
-              <div className="flex items-center w-full">
-                <div className="flex-1 text-right pr-8">
-                  <span className="text-sm font-black whitespace-nowrap">2024</span>
+          
+          {/* Experience Entries Container Adjusted for Flex */}
+          <div className="flex flex-col items-center space-y-4 mt-4">
+            {/* Adjusted Flex Container for Each Entry */}
+            <div className="flex justify-center items-center w-full">
+              <div className="w-full max-w-md flex justify-between items-center px-4">
+                {/* Left Side (Year) Adjusted for Center Alignment */}
+                <div className="flex-1 text-right pr-4">
+                  <span className="text-sm font-black">2024</span>
                 </div>
-                <div className="flex-1 text-left pl-8">
-                  <p className="whitespace-nowrap">SDE Intern @ Amazon</p>
-                  <p className="whitespace-nowrap">DevRel @ SingleStore</p>
+                {/* Right Side (Positions) Adjusted for Center Alignment */}
+                <div className="flex-1 text-left pl-4">
+                  <p>SDE Intern @ Amazon</p>
+                  <p>DevRel @ SingleStore</p>
                 </div>
               </div>
             </div>
-            
-            {/* Experience Entry */}
-            <div className="flex justify-center items-center w-full max-w-md">
-              <div className="flex items-center w-full">
-                <div className="flex-1 text-right pr-8">
-                  <span className="text-sm font-black whitespace-nowrap">2022</span>
+
+            {/* Repeat for Each Entry as Needed */}
+            <div className="flex justify-center items-center w-full">
+              <div className="w-full max-w-md flex justify-between items-center px-4">
+                <div className="flex-1 text-right pr-4">
+                  <span className="text-sm font-black">2022</span>
                 </div>
-                <div className="flex-1 text-left pl-8">
-                  <p className="whitespace-nowrap">SWE Intern @ PikMyKid</p>
+                <div className="flex-1 text-left pl-4">
+                  <p>SWE Intern @ PikMyKid</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </main>
   );
