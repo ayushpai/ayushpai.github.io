@@ -50,7 +50,7 @@ export default function Home() {
                 <div className="w-48 text-right">
                   <span className="text-sm font-black pr-16">2022</span>
                 </div>
-                <div className="flex-1 text-right pl-16">
+                <div className="flex-1 text-right pl-48">
                   <p>SWE Intern @ PikMyKid</p>
                 </div>
               </div>
