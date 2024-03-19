@@ -27,29 +27,30 @@ export default function Home() {
         </div>
 
         {/* Work Experience Section */}
-        <div className="w-full text-center flex justify-center">
-          <div className="relative">
-            
-            {/* Experience Entries */}
-            <div className="flex flex-col space-y-4">
-              {/* Experience Entry */}
-              <div className="flex items-center">
-                <div className="w-48 text-right">
-                  <span className="text-sm font-black pr-16">2024</span>
+        <div className="w-full text-center relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-gray-300 to-transparent" style={{height: '150%'}}></div>
+          <div className="flex flex-col items-center space-y-4">
+            {/* Experience Entry */}
+            <div className="flex justify-center items-center w-full max-w-md">
+              <div className="flex items-center w-full">
+                <div className="flex-1 text-right pr-8">
+                  <span className="text-sm font-black whitespace-nowrap">2024</span>
                 </div>
-                <div className="flex-1 text-right pl-32">
-                  <p>SDE Intern @ Amazon</p>
-                  <p>DevRel @ SingleStore</p>
+                <div className="flex-1 text-left pl-8">
+                  <p className="whitespace-nowrap">SDE Intern @ Amazon</p>
+                  <p className="whitespace-nowrap">DevRel @ SingleStore</p>
                 </div>
               </div>
-              
-              {/* Experience Entry */}
-              <div className="flex items-center">
-                <div className="w-48 text-right">
-                  <span className="text-sm font-black pr-16">2022</span>
+            </div>
+            
+            {/* Experience Entry */}
+            <div className="flex justify-center items-center w-full max-w-md">
+              <div className="flex items-center w-full">
+                <div className="flex-1 text-right pr-8">
+                  <span className="text-sm font-black whitespace-nowrap">2022</span>
                 </div>
-                <div className="flex-1 text-right pl-32">
-                  <p>SWE Intern @ PikMyKid</p>
+                <div className="flex-1 text-left pl-8">
+                  <p className="whitespace-nowrap">SWE Intern @ PikMyKid</p>
                 </div>
               </div>
             </div>
