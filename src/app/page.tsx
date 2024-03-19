@@ -32,7 +32,7 @@ export default function Home() {
             {/* Experience Entry */}
             <div className="flex justify-center items-center w-full max-w-md">
               <div className="flex justify-between items-center w-full px-4">
-                <span className="text-sm font-medium">2024</span>
+                <span className="text-sm font-black">2024</span>
                 <div className="text-left">
                   <p>SDE Intern @ Amazon</p>
                   <p>DevRel @ SingleStore</p>
@@ -43,7 +43,7 @@ export default function Home() {
             {/* Experience Entry */}
             <div className="flex justify-center items-center w-full max-w-md">
               <div className="flex justify-between items-center w-full px-4">
-                <span className="text-sm font-medium">2022</span>
+                <span className="text-sm font-black">2022</span>
                 <p className="text-left">SWE Intern @ PikMyKid</p>
               </div>
             </div>
