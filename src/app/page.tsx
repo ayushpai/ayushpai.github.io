@@ -29,8 +29,6 @@ export default function Home() {
         {/* Work Experience Section */}
         <div className="w-full text-center flex justify-center">
           <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-[170%] w-0.5 bg-gradient-to-b from-gray-300 to-transparent"></div>
             
             {/* Experience Entries */}
             <div className="flex flex-col space-y-4">
@@ -39,7 +37,7 @@ export default function Home() {
                 <div className="w-48 text-right">
                   <span className="text-sm font-black pr-16">2024</span>
                 </div>
-                <div className="flex-1 text-right pl-16">
+                <div className="flex-1 text-right pl-32">
                   <p>SDE Intern @ Amazon</p>
                   <p>DevRel @ SingleStore</p>
                 </div>
@@ -50,7 +48,7 @@ export default function Home() {
                 <div className="w-48 text-right">
                   <span className="text-sm font-black pr-16">2022</span>
                 </div>
-                <div className="flex-1 text-right pl-48">
+                <div className="flex-1 text-right pl-32">
                   <p>SWE Intern @ PikMyKid</p>
                 </div>
               </div>
