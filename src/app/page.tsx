@@ -29,7 +29,6 @@ export default function Home() {
       {/* Work Experience Section */}
       <div className="w-full text-center relative">
         {/* Vertical Line with Gradient at the Bottom */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-gray-300 to-transparent" style={{height: '150%'}}></div>
 
         <div className="flex flex-col items-center space-y-4">
           {/* Experience Entry */}
@@ -38,7 +37,7 @@ export default function Home() {
               <div className="flex-1 text-center">
                 <span className="text-sm font-black">2024</span>
               </div>
-              <div className="text-left text-sm pl-4">
+              <div className="text-left text-sm pl-16">
                 <p>SDE Intern @ Amazon</p>
                 <p>DevRel @ SingleStore</p>
               </div>
@@ -51,7 +50,7 @@ export default function Home() {
               <div className="flex-1 text-center">
                 <span className="text-sm font-black">2022</span>
               </div>
-              <div className="text-left text-sm pl-1">
+              <div className="text-left text-sm pl-14">
                 <p>SWE Intern @ PikMyKid</p>
               </div>
             </div>
