@@ -35,10 +35,10 @@ export default function Home() {
           {/* Experience Entry */}
           <div className="flex justify-center items-center w-full">
             <div className="w-full max-w-md flex justify-between px-4">
-              <div className="text-right">
+              <div className="flex-1 text-center">
                 <span className="text-sm font-black">2024</span>
               </div>
-              <div className="text-left pl-4">
+              <div className="text-left text-sm pl-4">
                 <p>SDE Intern @ Amazon</p>
                 <p>DevRel @ SingleStore</p>
               </div>
@@ -48,10 +48,10 @@ export default function Home() {
           {/* Experience Entry */}
           <div className="flex justify-center items-center w-full">
             <div className="w-full max-w-md flex justify-between px-4">
-              <div className="text-right">
+              <div className="flex-1 text-center">
                 <span className="text-sm font-black">2022</span>
               </div>
-              <div className="text-left pl-4">
+              <div className="text-left text-sm pl-1">
                 <p>SWE Intern @ PikMyKid</p>
               </div>
             </div>
