@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-7xl font-bold mb-8">Ayush Pai</h1>
       
       <div className="text-justify-center mx-auto max-w-2xl mb-10">
-        <p className="text-md">Hi! I am a 2nd-year Computer Science student @ Georgia Tech concentrating in AI and Computer Architecture. My research interest lies in exploring the intersection of language and pixels to build scalable world models.</p>
+        <p className="text-md">Hi! I am a 2nd-year Computer Science student @ Georgia Tech concentrating in AI and computer architecture. My research interest lies in exploring the intersection of language and pixels to build scalable world models.</p>
       </div>
 
       <div className="flex justify-center gap-4 mb-20">
