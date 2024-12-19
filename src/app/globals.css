@@ -6,7 +6,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 135, 135, 135;
+    --background-start-rgb: 1305, 135, 135;
     --background-end-rgb: 0, 0, 0;
   }
 }
@@ -15,7 +15,7 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 75, 75, 75;
+    --background-end-rgb: 30, 30, 30;
   }
 }
 
@@ -35,7 +35,7 @@ body::before {
   background-image: url('/stars.jpeg');
   background-size: cover;
   background-position: center;
-  opacity: 0.5; /* 20% opacity */
+  opacity: 0.4; /* 20% opacity */
   z-index: -1;
 }
 
