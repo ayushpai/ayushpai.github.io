@@ -73,7 +73,7 @@ export default function Home() {
         {/* Description */}
         <div className="text-left mb-10">
           <p className="text-md">
-            I'm a 3rd-year Computer Science student @ Georgia Tech specializing in AI/ML and Networking. I am passionate about building consumer-facing products that leverage amazing technology to solve real-world problems.
+            I&#39;m a 3rd-year Computer Science student @ Georgia Tech specializing in AI/ML and Networking. I am passionate about building consumer-facing products that leverage amazing technology to solve real-world problems.
           </p>
         </div>
 
