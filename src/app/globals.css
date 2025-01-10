@@ -2,21 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 1305, 135, 135;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 30, 30, 30;
-  }
+:root {
+  --foreground-rgb: 255, 255, 255; /* White text */
+  --background-start-rgb: 0, 0, 0; /* Black background at the top */
+  --background-end-rgb: 30, 30, 30; /* Slightly lighter black at the bottom */
 }
 
 body {
@@ -35,7 +24,7 @@ body::before {
   background-image: url('/stars.jpeg');
   background-size: cover;
   background-position: center;
-  opacity: 0.4; /* 20% opacity */
+  opacity: 0.4; /* 40% opacity for the stars image */
   z-index: -1;
 }
 
