@@ -7,7 +7,7 @@ const experiences = [
     description: (
       <>
         Incoming Software Engineer Intern at{" "}
-        <span className="font-bold text-blue-400">Meta</span>.
+        <span className="font-bold text-blue-400">Meta.</span> I will be working on machine learning for ads ranking at Instagram. HMU if you're in the bay this summer!
       </>
     ),
   },
@@ -109,7 +109,7 @@ export default function Home() {
             <FaGithub size={24} />
           </a>
           <a
-            href="https://twitter.com/ayushspai"
+            href="https://twitter.com/ayushpai0"
             aria-label="Twitter"
             className="text-gray-400 hover:text-gray-200"
             target="_blank"
