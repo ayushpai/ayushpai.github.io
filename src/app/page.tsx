@@ -7,7 +7,7 @@ const experiences = [
     description: (
       <>
         Incoming Software Engineer Intern at{" "}
-        <span className="font-bold text-blue-400">Meta.</span> I will be working on machine learning for ads ranking at Instagram. HMU if you're in the bay this summer!
+        <span className="font-bold text-blue-400">Meta.</span> I will be working on machine learning for ads ranking at <span className="font-bold text-blue-400">Instagram</span>. HMU if you&apos;re in the bay this summer!
       </>
     ),
   },
