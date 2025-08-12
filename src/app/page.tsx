@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
       <div className="text-left max-w-2xl mx-auto">
         {/* Greeting */}
-        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-black">
+        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-black dark:text-white">
           Hi! I&apos;m Ayush Pai.
         </h1>
 
@@ -18,7 +18,7 @@ export default function Home() {
         <div className="flex justify-between gap-8 mb-8">
           <a
             href="https://github.com/ayushpai"
-            className="text-black hover:text-gray-600"
+            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -27,7 +27,7 @@ export default function Home() {
           </a>
           <a
             href="https://www.linkedin.com/in/ayushpai/"
-            className="text-black hover:text-gray-600"
+            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -36,7 +36,7 @@ export default function Home() {
           </a>
           <a
             href="https://twitter.com/ayushpai0"
-            className="text-black hover:text-gray-600"
+            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
@@ -45,7 +45,7 @@ export default function Home() {
           </a>
           <a
             href="https://www.youtube.com/c/AyushPai"
-            className="text-black hover:text-gray-600"
+            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
@@ -54,7 +54,7 @@ export default function Home() {
           </a>
           <a
             href="https://www.instagram.com/ayushspai/?hl=en"
-            className="text-black hover:text-gray-600"
+            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
 
         {/* Introduction Paragraphs */}
-        <div className="space-y-4 mb-6 text-black">
+        <div className="space-y-4 mb-6 text-black dark:text-white">
           <p>
             I am a final year student at the Georgia Institute of Technology studying Computer Science.
           </p>
@@ -72,7 +72,7 @@ export default function Home() {
             I&apos;ve previously done engineering at{" "}
             <a
               href="https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/"
-              className="text-blue-600 underline hover:text-blue-800"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -81,7 +81,7 @@ export default function Home() {
             ,{" "}
             <a
               href="https://aws.amazon.com/organizations/"
-              className="text-blue-600 underline hover:text-blue-800"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -90,7 +90,7 @@ export default function Home() {
             , and{" "}
             <a
               href="https://events.singlestore.com/webinar-building-applications-with-vector-databases"
-              className="text-blue-600 underline hover:text-blue-800"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -102,7 +102,7 @@ export default function Home() {
             I like solving challenging problems and building cool{" "}
             <a
               href="/stuff"
-              className="text-blue-600 underline hover:text-blue-800"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
             >
               stuff
             </a>.
@@ -110,15 +110,15 @@ export default function Home() {
         </div>
 
         {/* Separator Line */}
-        <hr className="border-gray-300 mb-6" />
+        <hr className="border-gray-300 dark:border-gray-600 mb-6" />
 
         {/* Contact Information */}
         <div className="mb-4">
-          <p className="text-black">
+          <p className="text-black dark:text-white">
             Reach out to me at{" "}
             <a 
               href="mailto:ayushpai@gatech.edu" 
-              className="text-blue-600 underline hover:text-blue-800"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
             >
               ayushpai@gatech.edu
             </a>{" "}
