@@ -3,7 +3,7 @@ import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } f
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-4">
+    <main className="flex min-h-screen flex-col items-center justify-start pt-16 px-4">
       <Head>
         <title>Ayush Pai - Home</title>
         <meta name="description" content="Ayush Pai's personal website" />

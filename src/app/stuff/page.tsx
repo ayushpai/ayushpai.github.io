@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Stuff() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-4 pt-20">
+    <main className="flex min-h-screen flex-col items-center justify-start pt-20 px-4">
       <Head>
         <title>Stuff - Ayush Pai</title>
         <meta name="description" content="Projects and stuff by Ayush Pai" />
