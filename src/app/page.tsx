@@ -11,7 +11,7 @@ export default function Home() {
       <div className="text-left max-w-2xl mx-auto">
         {/* Greeting */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
-          Hi! I'm Ayush Pai.
+          Hi! I&apos;m Ayush Pai.
         </h1>
 
         {/* Links */}
@@ -69,7 +69,7 @@ export default function Home() {
             I am a final year student at the Georgia Institute of Technology studying Computer Science.
           </p>
           <p>
-            I've previously done engineering at{" "}
+            I&apos;ve previously done engineering at{" "}
             <a
               href="https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/"
               className="text-blue-600 underline hover:text-blue-800"
