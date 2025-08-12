@@ -16,7 +16,7 @@ export default function Things() {
         {/* Content */}
         <div className="space-y-4 mb-8 text-black">
           <p>
-            This is where I'll share interesting things, projects, and thoughts.
+            This is where I&apos;ll share interesting things, projects, and thoughts.
           </p>
           <p>
             Coming soon...
