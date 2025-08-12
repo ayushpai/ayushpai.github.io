@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
       <div className="text-left max-w-2xl mx-auto">
         {/* Greeting */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
+        <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-black">
           Hi! I&apos;m Ayush Pai.
         </h1>
 
