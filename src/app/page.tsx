@@ -105,7 +105,20 @@ export default function Home() {
               className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
             >
               stuff
-            </a>.
+            </a>. Check out my{" "}
+            <a
+              href="/notes"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+            >
+              notes
+            </a>{" "}
+            and{" "}
+            <a
+              href="/blog"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+            >
+              blog
+            </a>!
           </p>
         </div>
 
