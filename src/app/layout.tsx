@@ -15,6 +15,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Force light mode by removing any dark class and preventing it from being added
+              document.documentElement.classList.remove('dark');
+              // Override any media query detection
+              if (typeof window !== 'undefined') {
+                const observer = new MutationObserver(() => {
+                  document.documentElement.classList.remove('dark');
+                });
+                observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="bg-white dark:bg-gray-900 text-black dark:text-white">{children}</body>
     </html>
   );
