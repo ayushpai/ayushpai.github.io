@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const currentItems = [
   {
@@ -16,6 +17,8 @@ const pastItems = [
   {
     title: "Georgia Tech",
     description: "Graduated with a bachelor's and master's in Computer Science.",
+    descriptionLinkText: "Graduated",
+    descriptionHref: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7459974137768390658/",
   },
   {
     title: "Second Thoughts",
@@ -54,8 +57,24 @@ const pastItems = [
 function ItemLine({
   item,
 }: {
-  item: { title: string; description: string; href?: string };
+  item: {
+    title: string;
+    description: string;
+    href?: string;
+    descriptionLinkText?: string;
+    descriptionHref?: string;
+  };
 }) {
+  const linkedDescription =
+    item.descriptionLinkText && item.descriptionHref
+      ? item.description.replace(
+          item.descriptionLinkText,
+          `__LINK__${item.descriptionLinkText}__LINK__`,
+        )
+      : item.description;
+
+  const descriptionParts = linkedDescription.split("__LINK__");
+
   return (
     <p>
       {item.href ? (
@@ -70,7 +89,22 @@ function ItemLine({
       ) : (
         <strong>{item.title}</strong>
       )}{" "}
-      - {item.description}
+      -{" "}
+      {descriptionParts.map((part, index) =>
+        part === item.descriptionLinkText && item.descriptionHref ? (
+          <a
+            key={`${item.title}-${index}`}
+            href={item.descriptionHref}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={`${item.title}-${index}`}>{part}</span>
+        ),
+      )}
     </p>
   );
 }
@@ -83,22 +117,13 @@ export default function Home() {
           <h1 className="text-5xl font-semibold">Ayush Pai</h1>
           <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/ayushpai/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="text-[rgba(58,58,58,0.82)] transition-opacity hover:opacity-100"
-            >
-              <FaLinkedin size={18} />
-            </a>
-            <a
               href="https://twitter.com/ayushpai0"
               target="_blank"
               rel="noreferrer"
               aria-label="Twitter"
               className="text-[rgba(58,58,58,0.82)] transition-opacity hover:opacity-100"
             >
-              <FaTwitter size={18} />
+              <FaXTwitter size={18} />
             </a>
             <a
               href="https://github.com/ayushpai"
@@ -109,10 +134,47 @@ export default function Home() {
             >
               <FaGithub size={18} />
             </a>
+            <a
+              href="https://www.linkedin.com/in/ayushpai/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="text-[rgba(58,58,58,0.82)] transition-opacity hover:opacity-100"
+            >
+              <FaLinkedin size={18} />
+            </a>
           </div>
         </div>
         <p className="max-w-3xl text-base leading-7">
           I like to work on interesting problems in ML and systems. I just graduated from Georgia Tech and am moving to San Francisco very soon. If you&apos;re looking for roommates, reach out :)
+        </p>
+        <p className="mt-2 max-w-3xl text-base leading-7">
+          In my free time, I like{" "}
+          <a
+            href="/media"
+            className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+          >
+            photography
+          </a>
+          ,{" "}
+          <a
+            href="https://www.youtube.com/c/AyushPai"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+          >
+            tinkering
+          </a>
+          , and kudo-farming on{" "}
+          <a
+            href="https://www.strava.com/athletes/154958013"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+          >
+            Strava
+          </a>
+          .
         </p>
         <hr className="my-6 border-0 border-t border-black/10" />
         <p className="mb-5 text-xl italic opacity-55">Current</p>
