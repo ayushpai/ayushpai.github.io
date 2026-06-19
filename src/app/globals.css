@@ -2,17 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0; /* Black text */
-  --background-rgb: 255, 255, 255; /* White background */
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
   min-height: 100vh;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-display: swap;
+  margin: 0;
+  background: #fcfbf8;
+  color: #3A3A3A;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
 
 @layer utilities {
