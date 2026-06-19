@@ -1,10 +1,10 @@
 import './globals.css';
 
 export const metadata = {
-  title: "Blank Slate",
-  description: "A blank starting point.",
+  title: "Ayush Pai",
+  description: "I like to work on interesting problems in ML and systems. I just graduated from Georgia Tech and am moving to San Francisco very soon. If you're looking for roommates, reach out :)",
   icons: {
-    icon: 'favicon.png',
+    icon: 'ap404.png',
   },
 };
 
