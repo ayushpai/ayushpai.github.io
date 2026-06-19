@@ -151,7 +151,9 @@ export default function Home() {
         <p className="mt-2 max-w-3xl text-base leading-7">
           In my free time, I like{" "}
           <a
-            href="/media"
+            href="https://www.youtube.com/watch?v=r9lpSNgYBD8&feature=youtu.be"
+            target="_blank"
+            rel="noreferrer"
             className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
           >
             photography
