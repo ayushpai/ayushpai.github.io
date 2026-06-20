@@ -178,7 +178,10 @@ export default function Home() {
           </a>
           .
         </p>
-        <hr className="my-6 border-0 border-t border-black/10" />
+        <p className="mt-3 mb-0 max-w-3xl text-sm leading-6 opacity-70">
+          ayushpai [at] gmail [dot] com
+        </p>
+        <hr className="mt-1 mb-6 border-0 border-t border-black/10" />
         <p className="mb-5 text-xl italic opacity-55">Current</p>
         <div className="space-y-5 text-base leading-7">
           {currentItems.map((item) => (
