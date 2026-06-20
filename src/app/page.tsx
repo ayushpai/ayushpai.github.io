@@ -26,7 +26,7 @@ const pastItems = [
   },
   {
     title: "ML Intern @ Meta",
-    description: "Built a ranking model for Instagram that decides how content is ordered in production.",
+    description: "Built a new ranking model on Instagram that got served to production.",
   },
   {
     title: "Donna",
@@ -49,7 +49,7 @@ const pastItems = [
   },
   {
     title: "Rentathon",
-    description: "Built a person-to-person rental marketplace for household items.",
+    description: "A person-to-person rental marketplace for household items.",
     href: "https://www.rentathonapp.com/",
   },
 ];
