@@ -160,12 +160,10 @@ export default function Home() {
           </a>
           ,{" "}
           <a
-            href="https://www.youtube.com/c/AyushPai"
-            target="_blank"
-            rel="noreferrer"
+            href="/writing"
             className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
           >
-            tinkering
+            writing
           </a>
           , and kudo-farming on{" "}
           <a
