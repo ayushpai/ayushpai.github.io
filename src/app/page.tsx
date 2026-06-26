@@ -7,9 +7,11 @@ const currentItems = [
     description: "Traveling, tinkering, moving to SF.",
   },
   {
-    title: "Researcher @ EI-HCAI Lab, Georgia Tech",
+    title: "Research @ EI-HCAI Lab, Georgia Tech",
+    titlePrefix: "Research @ ",
+    titleLinkText: "EI-HCAI Lab, Georgia Tech",
     description: "Working on novel guidance techniques for generative infilling in diffusion models.",
-    href: "https://eilab.gatech.edu/",
+    titleHref: "https://eilab.gatech.edu/",
   },
 ];
 
@@ -61,6 +63,9 @@ function ItemLine({
     title: string;
     description: string;
     href?: string;
+    titlePrefix?: string;
+    titleLinkText?: string;
+    titleHref?: string;
     descriptionLinkText?: string;
     descriptionHref?: string;
   };
@@ -77,7 +82,19 @@ function ItemLine({
 
   return (
     <p>
-      {item.href ? (
+      {item.titlePrefix && item.titleLinkText && item.titleHref ? (
+        <>
+          <strong>{item.titlePrefix}</strong>
+          <a
+            href={item.titleHref}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+          >
+            <strong>{item.titleLinkText}</strong>
+          </a>
+        </>
+      ) : item.href ? (
         <a
           href={item.href}
           target="_blank"
