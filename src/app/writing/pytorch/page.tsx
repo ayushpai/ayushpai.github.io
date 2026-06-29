@@ -228,6 +228,14 @@ print(q.shape)
               <code>head_dim</code>. PyTorch just does all of those projections
               in one batched operation.
             </p>
+            <pre className="overflow-x-auto whitespace-pre-wrap rounded-sm border border-black/10 bg-[#F5F2F0] px-4 py-3 text-sm leading-6">
+              <code>{`x[0, 0] @ W_q  # one token -> shape [head_dim]
+x[0, 1] @ W_q  # next token -> shape [head_dim]
+x[1, 3] @ W_q  # another token -> shape [head_dim]
+
+# PyTorch batches all of these together:
+q = x @ W_q`}</code>
+            </pre>
             <p className="text-base leading-7">
               So the broadcasting intuition is not that PyTorch literally copies
               the weight matrix across the batch and sequence dimensions.
