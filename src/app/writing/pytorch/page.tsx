@@ -1,14 +1,50 @@
+const sections = [
+  { id: "embedding", title: "nn.Embedding" },
+  { id: "view", title: "tensor.view" },
+  { id: "broadcasting", title: "Broadcasting with attention" },
+];
+
 export default function Pytorch() {
   return (
     <main className="min-h-screen px-6 py-12">
-      <div className="mx-auto max-w-4xl">
+      <div className="relative mx-auto max-w-4xl">
+        <div className="mb-6 space-y-3 lg:hidden">
+          <p className="text-sm italic opacity-55">Sections</p>
+          <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm leading-6">
+            {sections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+              >
+                {section.title}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <aside className="absolute right-full mr-10 hidden w-52 lg:block">
+          <div className="sticky top-12 space-y-3">
+            <p className="text-sm italic opacity-55">Sections</p>
+            <nav className="space-y-3 text-sm leading-6">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="block text-[rgba(58,58,58,0.82)] underline decoration-dotted underline-offset-4"
+                >
+                  {section.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </aside>
         <h1 className="mb-4 text-5xl font-semibold">PyTorch</h1>
         <p className="max-w-3xl text-base leading-7">
           Interesting findings while exploring PyTorch.
         </p>
         <hr className="my-6 border-0 border-t border-black/10" />
         <div className="space-y-8">
-          <section className="space-y-4 rounded-sm border border-black/10 bg-[#faf7f4] px-5 py-5">
+          <section id="embedding" className="scroll-mt-10 space-y-4 rounded-sm border border-black/10 bg-[#faf7f4] px-5 py-5">
             <p className="text-lg leading-7">
               <strong>nn.Embedding</strong>
             </p>
@@ -57,7 +93,7 @@ print(manual.shape)
               corresponding rows packed into one tensor.
             </p>
           </section>
-          <section className="space-y-4 rounded-sm border border-black/10 bg-[#faf7f4] px-5 py-5">
+          <section id="view" className="scroll-mt-10 space-y-4 rounded-sm border border-black/10 bg-[#faf7f4] px-5 py-5">
             <p className="text-lg leading-7">
               <strong>tensor.view</strong>
             </p>
@@ -135,6 +171,78 @@ print(r.shape)
               a cheap reshaping of contiguous memory, and remember that{" "}
               <code>reshape</code> may silently fall back to copying data when
               the layout no longer fits.
+            </p>
+          </section>
+          <section id="broadcasting" className="scroll-mt-10 space-y-4 rounded-sm border border-black/10 bg-[#faf7f4] px-5 py-5">
+            <p className="text-lg leading-7">
+              <strong>Broadcasting: a visualized example with attention</strong>
+            </p>
+            <p className="text-base leading-7">
+              Broadcasting shows up in all of the Q, K, and V projections in
+              attention, but it is easiest to see through the query projection
+              as one concrete example. If your input has shape{" "}
+              <code>(batch_size, context_length, embedding_dim)</code> and your
+              linear layer maps <code>embedding_dim -&gt; head_dim</code>, then
+              conceptually you are multiplying each token vector by a weight
+              matrix of shape <code>(embedding_dim, head_dim)</code>.
+            </p>
+            <p className="text-base leading-7">
+              The interesting part is that one object is 3D and the other is
+              2D, but PyTorch still knows how to do the multiplication. It
+              treats the last dimension of the input as the feature dimension
+              and applies the same projection independently across every batch
+              and time position.
+            </p>
+            <pre className="overflow-x-auto whitespace-pre-wrap rounded-sm border border-black/10 bg-[#F5F2F0] px-4 py-3 text-sm leading-6">
+              <code>{`import torch
+import torch.nn as nn
+
+batch_size = 2
+context_length = 4
+embedding_dim = 8
+head_dim = 3
+
+x = torch.randn(batch_size, context_length, embedding_dim)
+W_q = torch.randn(embedding_dim, head_dim)
+
+q = x @ W_q
+
+print(x.shape)
+# torch.Size([2, 4, 8])
+
+print(W_q.shape)
+# torch.Size([8, 3])
+
+print(q.shape)
+# torch.Size([2, 4, 3])`}</code>
+            </pre>
+            <p className="text-base leading-7">
+              You can read that as: for each one of the{" "}
+              <code>batch_size * context_length</code> token vectors, multiply a
+              length-<code>embedding_dim</code> vector by the same query matrix
+              and produce a length-<code>head_dim</code> output vector.
+            </p>
+            <p className="text-base leading-7">
+              Each token vector of length <code>embedding_dim</code> gets
+              multiplied by the same query matrix and becomes a vector of length{" "}
+              <code>head_dim</code>. PyTorch just does all of those projections
+              in one batched operation.
+            </p>
+            <p className="text-base leading-7">
+              So the broadcasting intuition is not that PyTorch literally copies
+              the weight matrix across the batch and sequence dimensions.
+              Instead, it reuses the same 2D weight matrix across all those
+              positions and performs the batched matmul as if that projection
+              were being applied over and over to each token.
+            </p>
+            <p className="text-base leading-7">
+              This is exactly the kind of thing that happens inside{" "}
+              <code>torch.nn.Linear</code>. The conceptual math is input times a
+              matrix of shape <code>(embedding_dim, head_dim)</code>, but
+              PyTorch stores the linear layer weight internally as{" "}
+              <code>(head_dim, embedding_dim)</code>. That transposed storage is
+              convenient because it reduces extra work in the backward pass and
+              fits the way the internal matrix multiplies are implemented.
             </p>
           </section>
         </div>
