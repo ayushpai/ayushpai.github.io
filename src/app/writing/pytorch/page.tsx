@@ -7,7 +7,7 @@ const sections = [
 export default function Pytorch() {
   return (
     <main className="min-h-screen px-6 py-12">
-      <div className="relative mx-auto max-w-4xl">
+      <div className="mx-auto max-w-[1320px] lg:grid lg:grid-cols-[220px_minmax(0,56rem)_220px] lg:gap-10">
         <div className="mb-6 space-y-3 lg:hidden">
           <p className="text-sm italic opacity-55">Sections</p>
           <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm leading-6">
@@ -22,7 +22,7 @@ export default function Pytorch() {
             ))}
           </nav>
         </div>
-        <aside className="absolute right-full mr-10 hidden w-52 lg:block">
+        <aside className="hidden lg:block">
           <div className="sticky top-12 space-y-3">
             <p className="text-sm italic opacity-55">Sections</p>
             <nav className="space-y-3 text-sm leading-6">
@@ -38,6 +38,7 @@ export default function Pytorch() {
             </nav>
           </div>
         </aside>
+        <div className="min-w-0">
         <h1 className="mb-4 text-5xl font-semibold">PyTorch</h1>
         <p className="max-w-3xl text-base leading-7">
           Interesting findings while exploring PyTorch.
@@ -254,6 +255,8 @@ q = x @ W_q`}</code>
             </p>
           </section>
         </div>
+        </div>
+        <div className="hidden lg:block" />
       </div>
     </main>
   );
